@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Harshi S Beauty Parlor | Vijayawada</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff8f6;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
+color:#c58a5c;
+animation:logoAnim 3s infinite alternate;
+}
+
+.logo span{
+color:#111;
+}
+
+@keyframes logoAnim{
+from{
+letter-spacing:1px;
+text-shadow:none;
+}
+to{
+letter-spacing:5px;
+text-shadow:0 0 15px rgba(197,138,92,0.7);
+}
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#c58a5c;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1600') center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:70px;
+color:white;
+margin-bottom:20px;
+animation:slideDown 1s ease;
+}
+
+.hero-content h1 span{
+color:#ffd1b0;
+}
+
+.hero-content p{
+font-size:20px;
+color:#eee;
+margin-bottom:35px;
+}
+
+@keyframes slideDown{
+from{
+opacity:0;
+transform:translateY(-50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 35px;
+border:none;
+border-radius:40px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+text-decoration:none;
+display:inline-block;
+}
+
+.book-btn{
+background:#c58a5c;
+color:white;
+}
+
+.book-btn:hover{
+background:#a96e42;
+transform:translateY(-3px);
+}
+
+.call-btn{
+background:white;
+color:#111;
+}
+
+.call-btn:hover{
+transform:translateY(-3px);
+}
+
+/* SERVICES */
+
+.services{
+padding:100px 7%;
+}
+
+.section-title{
+text-align:center;
+font-size:45px;
+margin-bottom:60px;
+color:#222;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+}
+
+.service-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.service-content{
+padding:25px;
+}
+
+.service-content h3{
+font-size:24px;
+margin-bottom:12px;
+color:#c58a5c;
+}
+
+.service-content p{
+line-height:1.7;
+color:#555;
+margin-bottom:18px;
+}
+
+.small-btn{
+padding:12px 22px;
+background:#111;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+}
+
+/* LOCATION */
+
+.location{
+padding:100px 7%;
+background:white;
+}
+
+.location-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.location-box h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.location-box p{
+font-size:18px;
+line-height:1.8;
+color:#555;
+margin-bottom:20px;
+}
+
+.contact-card{
+background:#fff4ec;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+.contact-card h3{
+margin-bottom:10px;
+color:#c58a5c;
+}
+
+.contact-btn{
+display:inline-block;
+padding:14px 28px;
+background:#c58a5c;
+color:white;
+border-radius:40px;
+text-decoration:none;
+margin-top:10px;
+font-weight:600;
+}
+
+/* MAP */
+
+iframe{
+width:100%;
+height:450px;
+border:none;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* LOGIN POPUP */
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.popup-content{
+background:white;
+padding:40px;
+width:90%;
+max-width:400px;
+border-radius:20px;
+text-align:center;
+position:relative;
+animation:popupAnim 0.4s ease;
+}
+
+@keyframes popupAnim{
+from{
+transform:scale(0.7);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.popup-content h2{
+margin-bottom:20px;
+}
+
+.popup-content input{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+.popup-content button{
+width:100%;
+padding:14px;
+border:none;
+background:#c58a5c;
+color:white;
+font-size:16px;
+border-radius:10px;
+cursor:pointer;
+}
+
+.close{
+position:absolute;
+top:15px;
+right:20px;
+font-size:25px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+footer p{
+margin:8px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:45px;
+}
+
+nav ul{
+display:none;
+}
+
+.location-container{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+Harshi's <span>Parlor</span>
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="tel:9014826170">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Welcome to <span>Harshi's Parlor</span>
+</h1>
+
+<p>
+Premium Women's Beauty Salon Near Kabela, Vijayawada
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn book-btn" onclick="openPopup()">
+Book Appointment
+</button>
+
+<a href="tel:9014826170" class="btn call-btn">
+📞 Call Now
+</a>
+
+<a href="https://wa.me/919014826170" class="btn book-btn">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<h2 class="section-title">
+Our Beauty Services
+</h2>
+
+<div class="service-grid">
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1200">
+
+<div class="service-content">
+
+<h3>Bridal Makeup</h3>
+
+<p>
+Professional bridal makeup for weddings and special occasions with premium finishing.
+</p>
+
+<button class="small-btn" onclick="openPopup()">
+Book Now
+</button>
+
+</div>
+</div>
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1200">
+
+<div class="service-content">
+
+<h3>Hair Styling</h3>
+
+<p>
+Hair spa, smoothing, coloring and modern styling with expert care.
+</p>
+
+<button class="small-btn" onclick="openPopup()">
+Book Now
+</button>
+
+</div>
+</div>
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1200">
+
+<div class="service-content">
+
+<h3>Facial Treatment</h3>
+
+<p>
+Glow facials and skin treatments for healthy, smooth and radiant skin.
+</p>
+
+<button class="small-btn" onclick="openPopup()">
+Book Now
+</button>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- LOCATION -->
+
+<section class="location" id="location">
+
+<div class="location-container">
+
+<div class="location-box">
+
+<h2>
+Visit Our Salon
+</h2>
+
+<p>
+Harshi S Beauty Parlor is located Near Kabela, Vijayawada, Andhra Pradesh.
+Easy access by auto, bike, car and local transport.
+</p>
+
+<div class="contact-card">
+
+<h3>
+📍 Address
+</h3>
+
+<p>
+Near Kabela, Vijayawada, Andhra Pradesh
+</p>
+
+<a
+href="https://maps.google.com/?q=Near+Kabela+Vijayawada+Andhra+Pradesh"
+target="_blank"
+class="contact-btn">
+
+Get Directions
+
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<h3>
+📞 Phone Number
+</h3>
+
+<p>
+9014826170
+</p>
+
+<a
+href="tel:9014826170"
+class="contact-btn">
+
+Call Now
+
+</a>
+
+</div>
+
+</div>
+
+<div>
+
+<iframe
+src="https://www.google.com/maps?q=Near+Kabela+Vijayawada+Andhra+Pradesh&output=embed"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LOGIN POPUP -->
+
+<div class="popup" id="popup">
+
+<div class="popup-content">
+
+<div class="close" onclick="closePopup()">
+✖
+</div>
+
+<h2>
+Book Appointment
+</h2>
+
+<input type="text" placeholder="Your Name">
+
+<input type="tel" placeholder="Phone Number">
+
+<input type="date">
+
+<button onclick="submitBooking()">
+Confirm Booking
+</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Harshi S Beauty Parlor
+</p>
+
+<p>
+📍 Near Kabela, Vijayawada, Andhra Pradesh
+</p>
+
+<p>
+📞 9014826170
+</p>
+
+</footer>
+
+<script>
+
+function openPopup(){
+document.getElementById("popup").style.display="flex";
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+
+function submitBooking(){
+
+alert("Appointment Booked Successfully!");
+
+document.getElementById("popup").style.display="none";
+
+}
+
+</script>
+
+</body>
+</html>
